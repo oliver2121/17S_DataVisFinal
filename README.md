@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DataVisFinal 17S
 
 ## Basic Info
@@ -28,3 +29,6 @@ Link to Project repo: https://github.com/oliver2121/17S_DataVisFinal
 ## Optional Features
 
 ## Project Schedule
+=======
+# 17S_DataVisFinal
+>>>>>>> origin/master
