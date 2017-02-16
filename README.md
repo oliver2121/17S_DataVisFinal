@@ -34,20 +34,20 @@ We will eliminate some attributes we don't need to do visualization from the dat
 
 ## Project Schedule
 
-1/2-14/2: Planning project subject
+2/1-2/14: Planning project subject
 
-14/2-16/2: Data collecting and processing
+2/14-2/16: Data collecting and processing
 
-15/2: Documenting project proposal
+2/15: Documenting project proposal
 
-16/2-17/2: Feedback reviewing
+2/16-2/17: Feedback reviewing
 
-18/2-22/2: Data Visualization
+2/18-2/22: Data Visualization
 
-23/2: Demo presentation
+2/23: Demo presentation
 
-24/2-28/2: Refining data visualization
+2/24-2/28: Refining data visualization
 
-27/2: Film making
+2/27: Film making
 
-1/3: Final version of project
+3/1: Final version of project
