@@ -38,6 +38,8 @@ We will eliminate some attributes we don't need to do visualization from the dat
 ![sketch2](img/2.jpg)
 ![sketch3](img/3.jpg)
 ![sketch4](img/4.jpg)
+JiaxinLyu:
+For visulization design, I design a USA map which contains the distribution of all basketball teams in USA. When your mouse move on the dot in the map, it will display team's logo. Beside the map, it will show a bar chart which will record team 's performance including six index for every match in this season. In addition to this, when you click each match, It will show six pie chart for each index which include fifteen team member's ability index.
 
 ## Must-Have Features
 
