@@ -29,3 +29,21 @@ Link to Project repo: https://github.com/oliver2121/17S_DataVisFinal
 ## Optional Features
 
 ## Project Schedule
+
+1/2-14/2: Planning project subject
+
+14/2-16/2: Data collecting and processing
+
+15/2: Documenting project proposal
+
+16/2-17/2: Feedback reviewing
+
+18/2-22/2: Data Visualization
+
+23/2: Demo presentation
+
+24/2-28/2: Refining data visualization
+
+27/2: Film making
+
+1/3: Final version of project
