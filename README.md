@@ -34,6 +34,11 @@ We will eliminate some attributes we don't need to do visualization from the dat
 
 ## Visualization Design
 
+![sketch1](img/1.jpeg)
+![sketch2](img/2.jpg)
+![sketch3](img/3.jpg)
+![sketch4](img/4.jpg)
+
 ## Must-Have Features
 
 - 1. Pick a player to see the whole season average data trend.
