@@ -40,17 +40,16 @@ Feng Zheng:
 I designed a map of United States with 30 teams of the East and the West. The logo of each team is shown on the map. With the mouse click of the team, the team’s data is listed on the chart on the right side. We can see the points, assists, rebounds, blocks, steals and turnovers of two teams in one game. Below the map is an overall data of the 30 teams. By using a switch we can see the different data of all the teams.
 
 ![sketch2](img/2.jpg)
-<<<<<<< HEAD
+
+SishiHao:
+
+There are three charts: line chart, bar chart and pie chart. In the line chart, you can see six kinds of data of each game and also you can see the trends of the data. When you click on particular game, the pie chart will show scores contributed by each player, which will be shown in different color. And if you would like to know information about one player of this game, you can click on the player in pie chart and all of the data will be shown in the bar chart. What's more, if you want to know the trends in one period, you can select that period in the line chart, the line chart will show the six kinds of data in that period.
+
 ![sketch3](img/3.jpg)
 Zhixiang Yang:
 
 In Zhixiang's initial design sketch, he consider a heating map in court to show the percentage of shooting ratio is pretty important. And a bar chart could be used for display the player performance in different quarter in season. In the bottom of the page we could use a line chart to show the player performance trend in whole season and compare with other players.
-=======
-SishiHao:
-There are three charts: line chart, bar chart and pie chart. In the line chart, you can see six kinds of data of each game and also you can see the trends of the data. When you click on particular game, the pie chart will show scores contributed by each player, which will be shown in different color. And if you would like to know information about one player of this game, you can click on the player in pie chart and all of the data will be shown in the bar chart. What's more, if you want to know the trends in one period, you can select that period in the line chart, the line chart will show the six kinds of data in that period.
->>>>>>> origin/master
 
-![sketch3](img/3.jpg)
 ![sketch4](img/4.jpg)
 JiaxinLyu:
 
