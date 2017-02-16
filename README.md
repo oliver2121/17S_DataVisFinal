@@ -43,6 +43,7 @@ We will eliminate some attributes we don't need to do visualization from the dat
 
 - 1. Pick a player to see the whole season average data trend.
 - 2. Pick a player to see his performance to different opponents in timeline.
+- 3. Show  the team performance data in whole season.
 
 ## Optional Features
 
