@@ -41,6 +41,8 @@ I designed a map of United States with 30 teams of the East and the West. The lo
 
 ![sketch2](img/2.jpg)
 ![sketch3](img/3.jpg)
+Zhixiang Yang:
+
 In Zhixiang's initial design sketch, he consider a heating map in court to show the percentage of shooting ratio is pretty important. And a bar chart could be used for display the player performance in different quarter in season. In the bottom of the page we could use a line chart to show the player performance trend in whole season and compare with other players.
 
 ![sketch4](img/4.jpg)
