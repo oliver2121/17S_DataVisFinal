@@ -55,6 +55,10 @@ JiaxinLyu:
 
 For visulization design, I design a USA map which contains the distribution of all basketball teams in USA. When your mouse move on the dot in the map, it will display team's logo. Beside the map, it will show a bar chart which will record team 's performance including six index for every match in this season. In addition to this, when you click each match, It will show six pie chart for each index which include fifteen team member's ability index.
 
+Summery:
+
+After we discussed of those prototype designs we decide we opt to focus on a single team which is Boston Celtics to do the visualization analysis. We will pick up design idea from those sketches and make it a whole.
+
 ## Must-Have Features
 
 - 1. Pick a player to see the whole season average data trend.
