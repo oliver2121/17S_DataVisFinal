@@ -20,6 +20,7 @@ Link to Project repo: https://github.com/oliver2121/17S_DataVisFinal
 ## Data
 
 We collect data we need from the website below:
+
 http://basketball.realgm.com/nba/stats
 
 ## Data Processing
@@ -30,7 +31,13 @@ We will eliminate some attributes we don't need to do visualization from the dat
 
 ## Must-Have Features
 
+- 1. Pick a player to see the whole season average data trend.
+- 2. Pick a player to see his performance to different opponents in timeline.
+
 ## Optional Features
+
+- 1. Show a heat map of filed goals percentage in court map.
+- 2. Show a geo map of different opponents with match stats.
 
 ## Project Schedule
 
