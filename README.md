@@ -3,7 +3,7 @@
 
 ## Basic Info
 
-Project Title:
+Project Title: Boston Celtics Data Analysis in 2016
 
 Team Members : Zhixiang Yang, Feng Zheng, Sishi Hao, Jiaxin Lyu.
 
@@ -19,8 +19,12 @@ Link to Project repo: https://github.com/oliver2121/17S_DataVisFinal
 
 ## Data
 
+We collect data we need from the website below:
+http://basketball.realgm.com/nba/stats
+
 ## Data Processing
 
+We will eliminate some attributes we don't need to do visualization from the dataset. We hope to get around 1,000 rows of data for our analysis purpose. The data will be processing by excel.
 
 ## Visualization Design
 
