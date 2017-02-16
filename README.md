@@ -16,6 +16,7 @@ Link to Project repo: https://github.com/oliver2121/17S_DataVisFinal
 ## Background and Motivation
 
 ## Project Objectives
+Our project mainly focus on giving a comprehensively analysis of Boston Celtics basketball team and its player in order to understand the advantages of this team and find out each team player’s potential. Since data analysis has become an irreplaceable status in estimating each player’s ability and decision making, the display of the data turns out to be important. We decide to show six index of the team including TOV, RPG, APG, SPG, BPG and PPG in every game which support in analyzing overall performance of the team. For the people who are interested in specific player, it will also show each team player’s ability index and general performance in the whole season.
 
 ## Data
 
