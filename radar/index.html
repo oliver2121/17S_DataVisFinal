@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+		<title>Radar Chart</title>
+
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+		<!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<script src="./teambar.js"></script>
+		<style>
+			body {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 11px;
+				font-weight: 300;
+				fill: #242424;
+
+
+			}
+
+			.legend {
+				font-family: 'Raleway', sans-serif;
+				fill: #333333;
+			}
+
+			.tooltip {
+				fill: #333333;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div class="radarChart"></div>
+
+		<script src="radarChart.js"></script>
+		<script>
+			// Set-Up
+
+			var margin = {top: 20, right: 20, bottom: 20, left: 20},
+				width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
+				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+
+			////Data
+		var data = [
+					  [//iPhone
+						{axis:"Reb",value:47},
+						{axis:"Ast",value:22},
+						{axis:"STL",value:7},
+						{axis:"BLK",value:7},
+						{axis:"TO",value:13},
+						{axis:"PTS",value:105}
+
+					  ],[//Samsung
+						{axis:"Reb",value:44},
+						{axis:"Ast",value:19},
+						{axis:"STL",value:27},
+						{axis:"BLK",value:2},
+						{axis:"TO",value:10},
+						{axis:"PTS",value:109}
+					]
+
+					];
+
+	//Draw the Chart
+
+			var color = d3.scale.ordinal()
+				.range(["#EDC951","#CC333F","#00A0B0"]);
+
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 0.5,
+			  levels: 5,
+			  roundStrokes: true,
+			  color: color
+			};
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart", data, radarChartOptions);
+
+			var radarChartOptions = {
+				w: width,
+				h: height,
+				margin: margin,
+				maxValue: 0.5,
+				levels: 5,
+				roundStrokes: true,
+				color: color
+			};
+			//Call function to draw the Radar chart
+			RadarChart(".radarChart1", data, radarChartOptions);
+		</script>
+
+	<div class="radarChart1"></div>
+	<script src="radarChart1.js"></script>
+
+	<script>
+		// Set-Up
+
+		var margin = {top: 20, right: 20, bottom: 20, left: 20},
+			width = Math.min(200, window.innerWidth - 10) - margin.left - margin.right,
+			height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+		////Data
+	var data = [
+					[//iPhone
+					{axis:"Reb",value:47},
+					{axis:"Ast",value:22},
+					{axis:"STL",value:7},
+					{axis:"BLK",value:7},
+					{axis:"TO",value:13},
+					{axis:"PTS",value:105}
+
+					],[//Samsung
+					{axis:"Reb",value:44},
+					{axis:"Ast",value:19},
+					{axis:"STL",value:27},
+					{axis:"BLK",value:2},
+					{axis:"TO",value:10},
+					{axis:"PTS",value:109}
+				]
+
+				];
+
+//Draw the Chart
+
+		var color = d3.scale.ordinal()
+			.range(["#EDC951","#CC333F","#00A0B0"]);
+
+		var radarChartOptions = {
+			w: width,
+			h: height,
+			margin: margin,
+			maxValue: 0.5,
+			levels: 5,
+			roundStrokes: true,
+			color: color
+		};
+		//Call function to draw the Radar chart
+		RadarChart(".radarChart1", data, radarChartOptions);
+	</script>
+
+	</body>
+</html>

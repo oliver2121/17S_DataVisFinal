@@ -1,0 +1,31 @@
+#,Player,Status,Pos,Reb,Ast,PF,STL,BLK,TO,PTS
+0,Avery Bradley,Starter,SG,8,5,3,2,1,4,13
+90,Amir Johnson,Starter,PF,9,3,4,0,1,3,14
+41,Kelly Olynyk,Starter,C,6,4,5,0,1,3,16
+36,Marcus Smart,Starter,SF,2,2,4,1,0,0,9
+4,Isaiah Thomas,Starter,PG,0,5,4,1,0,2,23
+Bench,,,Bench,22,3,1,3,4,1,30
+,,,,,,,,,,
+#,Player,Status,Pos,Reb,Ast,PF,STL,BLK,TO,PTS
+0,Avery Bradley,Starter,SG,6,0,4,3,0,2,15
+99,Jae Crowder,Starter,SF,5,2,2,1,0,3,15
+42,Al Horford,Starter,C,11,1,2,0,1,1,8
+90,Amir Johnson,Starter,PF,6,1,3,1,0,1,11
+4,Isaiah Thomas,Starter,PG,1,9,4,0,0,0,28
+Bench,,,Bench,15,6,12,5,1,3,32
+,,,,,,,,,,
+#,Player,Status,Pos,Reb,Ast,PF,STL,BLK,TO,PTS
+11,Monta Ellis,Starter,SG,4,4,4,1,1,3,15
+0,C.J. Miles,Starter,SF,3,0,5,1,3,1,8
+44,Jeff Teague,Starter,PG,3,4,6,0,0,2,20
+33,Myles Turner,Starter,C,8,1,2,4,3,4,17
+21,Thaddeus Young,Starter,PF,8,3,2,2,0,1,10
+Bench,,,Bench,14,5,3,1,2,2,29
+,,,,,,,,,,
+#,Player,Status,Pos,Reb,Ast,PF,STL,BLK,TO,PTS
+13,Paul George,Starter,SF,8,5,4,2,0,5,19
+40,Glenn Robinson,Starter,SG,6,1,1,1,0,3,2
+44,Jeff Teague,Starter,PG,5,8,4,0,1,4,31
+33,Myles Turner,Starter,C,8,0,3,0,1,2,10
+21,Thaddeus Young,Starter,PF,12,4,2,1,0,1,15
+Bench,,,Bench,13,2,7,1,1,4,25
