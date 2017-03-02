@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+
+<style>
+  body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 1000px;
+  height: 1000px
+}
+    #select-list2{
+    	position:absolute;
+    	top:20px;
+    	left: 200px;
+    }
+    .chart2{
+            border-radius: 25px;
+            border: 2px solid #91cf60;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top:80px;
+            left: 400px;
+        }
+
+    .chart1{
+            border-radius: 25px;
+            border: 2px solid #91cf60;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top:80px;
+            left: 50px;  
+            }    
+
+    .chart3{
+            border-radius: 25px;
+            border: 2px solid #91cf60;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top:80px;
+            left: 740px;  
+            } 
+
+     .chart4{
+            border-radius: 25px;
+            border: 2px solid #91cf60;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top:400px;
+            left: 225px;  
+            } 
+
+      .chart5{
+            border-radius: 25px;
+            border: 2px solid #91cf60;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top:400px;
+            left: 570px;  
+            }   
+  /*     .legend{
+            height: 50px;
+            width: 300px;
+            position: absolute;
+            top:10px;
+            left: 500px;  
+            }     */  
+
+
+  </style>
+  </head>
+    <script src="http://d3js.org/d3.v3.js"></script>
+<svg width="1000" height="200"></svg>
+
+<body>
+
+
+<select id="select-list2">
+  <option value="CLE">BOS VS CLE</option> 
+  <option value="WAS">BOS VS WAS</option>
+  <option value="ATL">BOS VS ATL</option>
+  <option value="TOR">BOS VS TOR</option>
+  <option value="IND">BOS VS IND</option>
+  <option value="CHI">BOS VS CHI</option>
+  <option value="DET">BOS VS DET</option>
+
+</select>
+ 
+
+
+ <div class= "chart1" align="center">
+ 	<div style="text-align:center; font-size: 15px"> Point Guard</div>
+ </div>
+
+ <div class= "chart2" align="center">
+ 	<div style="text-align:center; font-size: 15px"> Shooting Guard</div>
+ </div>
+
+ <div class= "chart3" align="center">
+ 	<div style="text-align:center; font-size: 15px"> Small Forward</div>
+ </div>
+
+ <div class= "chart4" align="center">
+ 	<div style="text-align:center; font-size: 15px"> Power Forward</div>
+ </div>
+ <div class= "chart5" align="center">
+ 	<div style="text-align:center; font-size: 15px"> Center</div>
+ </div>
+
+
+<!--  <div class= "legend" align="center"></div> -->
+
+  <script src="RadarChart.js"></script>
+ 
+<script>
+
+
+var w = 180
+	h = 180;
+
+var colorscale = d3.scale.category10();
+
+//Legend titles
+var LegendOptions = ['Celtics',newData];
+
+var C1 =  [
+		  [
+			{axis:"Blocks",value:0.5},
+			{axis:"Points",value:8.4},
+			{axis:"Assists",value:8.5},
+			{axis:"Turnovers",value:3},
+			{axis:"Rebounds",value:4},
+			{axis:"Steals",value:1.5},
+			  ],[
+			{axis:"Blocks",value:1.5},
+			{axis:"Points",value:5.5},
+			{axis:"Assists",value:9},
+			{axis:"Turnovers",value:1.5},
+			{axis:"Rebounds",value:4.5},
+			{axis:"Steals",value:0},
+			  ]
+		];
+var C2 = [
+		  [
+			{axis:"Blocks",value:0},
+			{axis:"Points",value:5.6},
+			{axis:"Assists",value:2},
+			{axis:"Turnovers",value:3.5},
+			{axis:"Rebounds",value:7.5},
+			{axis:"Steals",value:2},
+			  ],[
+			{axis:"Blocks",value:1.5},
+			{axis:"Points",value:5.5},
+			{axis:"Assists",value:2.5},
+			{axis:"Turnovers",value:0},
+			{axis:"Rebounds",value:4},
+			{axis:"Steals",value:5},
+			  ]
+		];
+
+var C3 = [
+		  [
+			{axis:"Blocks",value:1.5},
+			{axis:"Points",value:5.2},
+			{axis:"Assists",value:3},
+			{axis:"Turnovers",value:0.5},
+			{axis:"Rebounds",value:6},
+			{axis:"Steals",value:3.5},
+			  ],[
+			{axis:"Blocks",value:0.5},
+			{axis:"Points",value:6.7},
+			{axis:"Assists",value:12.5},
+			{axis:"Turnovers",value:2.5},
+			{axis:"Rebounds",value:10.5},
+			{axis:"Steals",value:2.5},
+			  ]
+		];
+
+var C4 = [
+		  [
+			{axis:"Blocks",value:2.5},
+			{axis:"Points",value:2.1},
+			{axis:"Assists",value:3.5},
+			{axis:"Turnovers",value:1},
+			{axis:"Rebounds",value:9.5},
+			{axis:"Steals",value:1},
+			  ],[
+			{axis:"Blocks",value:2},
+			{axis:"Points",value:5.6},
+			{axis:"Assists",value:1.5},
+			{axis:"Turnovers",value:0.5},
+			{axis:"Rebounds",value:11.5},
+			{axis:"Steals",value:0.29},
+			  ]
+		];
+
+var C5 = [
+		  [
+			{axis:"Blocks",value:1.5},
+			{axis:"Points",value:2.7},
+			{axis:"Assists",value:6},
+			{axis:"Turnovers",value:1},
+			{axis:"Rebounds",value:6},
+			{axis:"Steals",value:1},
+			  ],[
+			{axis:"Blocks",value:1.5},
+			{axis:"Points",value:4},
+			{axis:"Assists",value:1},
+			{axis:"Turnovers",value:0},
+			{axis:"Rebounds",value:14},
+			{axis:"Steals",value:1.5},
+			  ]
+		];
+
+var W1 = [
+		  [
+			{axis:"Blocks",value:0},
+			{axis:"Points",value:6.7},
+			{axis:"Assists",value:9},
+			{axis:"Turnovers",value:4},
+			{axis:"Rebounds",value:6.5},
+			{axis:"Steals",value:1.5},
+			  ],[
+			{axis:"Blocks",value:1},
+			{axis:"Points",value:5.2},
+			{axis:"Assists",value:9},
+			{axis:"Turnovers",value:3},
+			{axis:"Rebounds",value:4.6},
+			{axis:"Steals",value:2},
+			  ]
+		];
+
+var W2 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:6.1},
+      {axis:"Assists",value:4.5},
+      {axis:"Turnovers",value:2.5},
+      {axis:"Rebounds",value:7},
+      {axis:"Steals",value:2}
+        ],[
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:6.5},
+      {axis:"Assists",value:7},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:4},
+      {axis:"Steals",value:2.5},
+        ]
+    ];
+
+var W3 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:2.8},
+      {axis:"Assists",value:3},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:5.5},
+      {axis:"Steals",value:1.5}
+        ],[
+      {axis:"Blocks",value:2},
+      {axis:"Points",value:5.4},
+      {axis:"Assists",value:4.5},
+      {axis:"Turnovers",value:0.5},
+      {axis:"Rebounds",value:10.5},
+      {axis:"Steals",value:3.5},
+        ]
+    ];
+
+var W4 = [
+      [
+      {axis:"Blocks",value:2},
+      {axis:"Points",value:2.8},
+      {axis:"Assists",value:3.5},
+      {axis:"Turnovers",value:2.5},
+      {axis:"Rebounds",value:6},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:2.9},
+      {axis:"Assists",value:3.5},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:11.5},
+      {axis:"Steals",value:1.5},
+        ]
+    ];
+
+var W5 = [
+      [
+      {axis:"Blocks",value:2.5},
+      {axis:"Points",value:3.2},
+      {axis:"Assists",value:6},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:11.5},
+      {axis:"Steals",value:1}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:13.5},
+      {axis:"Assists",value:3},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:14},
+      {axis:"Steals",value:0.5},
+        ]
+    ];
+
+var a1 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:5.6},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:5},
+      {axis:"Rebounds",value:4},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:4.2},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:7},
+      {axis:"Steals",value:0},
+        ]
+    ];
+var a1 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:5.6},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:5},
+      {axis:"Rebounds",value:4},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:4.2},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:7},
+      {axis:"Steals",value:0},
+        ]
+    ];
+
+var a2 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:5.6},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:5},
+      {axis:"Rebounds",value:4},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:4.2},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:7},
+      {axis:"Steals",value:0},
+        ]
+    ];
+
+var a3 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:4.6},
+      {axis:"Assists",value:0},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:13},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:1},
+      {axis:"Points",value:1.8},
+      {axis:"Assists",value:2},
+      {axis:"Turnovers",value:0},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ];
+
+var a4 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:3.2},
+      {axis:"Assists",value:4},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:6},
+      {axis:"Steals",value:4}
+        ],[
+      {axis:"Blocks",value:2},
+      {axis:"Points",value:7},
+      {axis:"Assists",value:5},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:5},
+      {axis:"Steals",value:3},
+        ]
+    ]; 
+
+var a5 = [
+      [
+      {axis:"Blocks",value:1},
+      {axis:"Points",value:2.6},
+      {axis:"Assists",value:0},
+      {axis:"Turnovers",value:5},
+      {axis:"Rebounds",value:15},
+      {axis:"Steals",value:1}
+        ],[
+      {axis:"Blocks",value:1},
+      {axis:"Points",value:7.2},
+      {axis:"Assists",value:9},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:14},
+      {axis:"Steals",value:2},
+        ]
+    ];
+
+var t1 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:7.8},
+      {axis:"Assists",value:10},
+      {axis:"Turnovers",value:4},
+      {axis:"Rebounds",value:8},
+      {axis:"Steals",value:1}
+        ],[
+      {axis:"Blocks",value:0.25},
+      {axis:"Points",value:3.9},
+      {axis:"Assists",value:5},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:4},
+      {axis:"Steals",value:0.5},
+        ]
+    ]; 
+var t2 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:3.2},
+      {axis:"Assists",value:1.5},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:6.5},
+      {axis:"Steals",value:0.5}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:1.6},
+      {axis:"Assists",value:0.75},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:3.25},
+      {axis:"Steals",value:0.25},
+        ]
+    ];
+
+var t3 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:3},
+      {axis:"Assists",value:2.5},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9},
+      {axis:"Steals",value:1.5}
+        ],[
+      {axis:"Blocks",value:0.25},
+      {axis:"Points",value:1.5},
+      {axis:"Assists",value:1.25},
+      {axis:"Turnovers",value:0.5},
+      {axis:"Rebounds",value:4.5},
+      {axis:"Steals",value:0.75},
+        ]
+    ];               
+
+var t4 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:2.4},
+      {axis:"Assists",value:1.5},
+      {axis:"Turnovers",value:0.5},
+      {axis:"Rebounds",value:5.5},
+      {axis:"Steals",value:0.5}
+        ],[
+      {axis:"Blocks",value:0.25},
+      {axis:"Points",value:1.2},
+      {axis:"Assists",value:0.75},
+      {axis:"Turnovers",value:0.25},
+      {axis:"Rebounds",value:2.75},
+      {axis:"Steals",value:0.25},
+        ]
+    ];  
+
+var t5 = [
+      [
+      {axis:"Blocks",value:1.5},
+      {axis:"Points",value:3.9},
+      {axis:"Assists",value:8.5},
+      {axis:"Turnovers",value:3.5},
+      {axis:"Rebounds",value:13.5},
+      {axis:"Steals",value:2}
+        ],[
+      {axis:"Blocks",value:0.75},
+      {axis:"Points",value:1.95},
+      {axis:"Assists",value:4.25},
+      {axis:"Turnovers",value:1.75},
+      {axis:"Rebounds",value:6.75},
+      {axis:"Steals",value:1},
+        ]
+    ]; 
+
+var i1 = [
+      [
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:6.3},
+      {axis:"Assists",value:8.5},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:2.5},
+      {axis:"Steals",value:1.5}
+        ],[
+      {axis:"Blocks",value:0.5},
+      {axis:"Points",value:5.2},
+      {axis:"Assists",value:8},
+      {axis:"Turnovers",value:4.5},
+      {axis:"Rebounds",value:5.5},
+      {axis:"Steals",value:0.5},
+        ]
+    ]; 
+
+var i2 = [
+      [
+      {axis:"Blocks",value:1.5},
+      {axis:"Points",value:3},
+      {axis:"Assists",value:2.5},
+      {axis:"Turnovers",value:2.5},
+      {axis:"Rebounds",value:12},
+      {axis:"Steals",value:0.5}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:2.7},
+      {axis:"Assists",value:4},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:13},
+      {axis:"Steals",value:2},
+        ]
+    ]; 
+
+var i3 = [
+      [
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:4},
+      {axis:"Assists",value:3},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:7},
+      {axis:"Steals",value:2.5}
+        ],[
+      {axis:"Blocks",value:2.5},
+      {axis:"Points",value:3.5},
+      {axis:"Assists",value:3.5},
+      {axis:"Turnovers",value:3},
+      {axis:"Rebounds",value:8.5},
+      {axis:"Steals",value:1.5},
+        ]
+    ]; 
+
+var i4 = [
+      [
+      {axis:"Blocks",value:1.5},
+      {axis:"Points",value:3},
+      {axis:"Assists",value:2.5},
+      {axis:"Turnovers",value:2.5},
+      {axis:"Rebounds",value:12},
+      {axis:"Steals",value:0.5}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:2.7},
+      {axis:"Assists",value:4},
+      {axis:"Turnovers",value:1.5},
+      {axis:"Rebounds",value:13},
+      {axis:"Steals",value:2},
+        ]
+    ]; 
+
+
+var i5 = [
+      [
+      {axis:"Blocks",value:1.5},
+      {axis:"Points",value:4.2},
+      {axis:"Assists",value:3.5},
+      {axis:"Turnovers",value:3},
+      {axis:"Rebounds",value:14},
+      {axis:"Steals",value:0.5}
+        ],[
+      {axis:"Blocks",value:2},
+      {axis:"Points",value:4.1},
+      {axis:"Assists",value:0.5},
+      {axis:"Turnovers",value:3.5},
+      {axis:"Rebounds",value:13},
+      {axis:"Steals",value:2},
+        ]
+    ]; 
+
+var c1 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:1.46},
+      {axis:"Assists",value:12.3},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:13.7},
+      {axis:"Steals",value:2.3}
+        ],[
+      {axis:"Blocks",value:0},
+      {axis:"Points",value:6.37},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:4.3},
+      {axis:"Rebounds",value:5.7},
+      {axis:"Steals",value:2.7},
+        ]
+    ];
+
+var c2 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:3.6},
+      {axis:"Assists",value:3.7},
+      {axis:"Turnovers",value:2.0},
+      {axis:"Rebounds",value:4.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:1},
+      {axis:"Points",value:3.54},
+      {axis:"Assists",value:5.3},
+      {axis:"Turnovers",value:1.7},
+      {axis:"Rebounds",value:6.7},
+      {axis:"Steals",value:0.3},
+        ]
+    ]; 
+
+var c3 = [
+      [
+      {axis:"Blocks",value:0.3},
+      {axis:"Points",value:6.54},
+      {axis:"Assists",value:5},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:7.3},
+      {axis:"Steals",value:1.7}
+        ],[
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:4},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:2.0},
+      {axis:"Rebounds",value:8.0},
+      {axis:"Steals",value:0.7},
+        ]
+    ];
+
+var c4 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:3.6},
+      {axis:"Assists",value:3.7},
+      {axis:"Turnovers",value:2},
+      {axis:"Rebounds",value:4.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:1},
+      {axis:"Points",value:4.5},
+      {axis:"Assists",value:5.3},
+      {axis:"Turnovers",value:1.7},
+      {axis:"Rebounds",value:6.7},
+      {axis:"Steals",value:0.3},
+        ]
+    ]; 
+
+var c5 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ]; 
+
+var b1 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ];  
+
+var b2 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ];                        
+
+var b3 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ];
+
+ 
+var b4 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ]; 
+
+var b5 = [
+      [
+      {axis:"Blocks",value:0.7},
+      {axis:"Points",value:2.86},
+      {axis:"Assists",value:1.3},
+      {axis:"Turnovers",value:1},
+      {axis:"Rebounds",value:9.7},
+      {axis:"Steals",value:0}
+        ],[
+      {axis:"Blocks",value:2.3},
+      {axis:"Points",value:4.14},
+      {axis:"Assists",value:7.7},
+      {axis:"Turnovers",value:1.3},
+      {axis:"Rebounds",value:11},
+      {axis:"Steals",value:0},
+        ]
+    ];       
+
+var mycfg = {
+  w: w,
+  h: h,
+  maxValue: 0.6,
+  levels: 6,
+  TranslateX: 50,
+  TranslateY: 70,
+  ExtraWidthX: 300
+}
+
+
+// var svg = d3.select(".chart")
+// 	.append("svg")
+// 	.attr("width", w)
+// 	.attr("height", h)
+// 	.append("g");
+
+
+d3.select('#select-list2')
+  .on('change', function() {
+    var newData = d3.select(this).property('value');
+
+    if       (newData === 'CLE') {
+    	   RadarChart.draw(".chart1", C1, mycfg)
+         RadarChart.draw('.chart2', C2, mycfg)
+         RadarChart.draw('.chart3', C3, mycfg)
+         RadarChart.draw('.chart4', C4, mycfg)
+         RadarChart.draw('.chart5', C5, mycfg);
+       
+    } else if (newData === 'WAS') {
+         RadarChart.draw(".chart1", W1, mycfg)
+         RadarChart.draw('.chart2', W2, mycfg)
+         RadarChart.draw('.chart3', W3, mycfg)
+         RadarChart.draw('.chart4', W4, mycfg)
+         RadarChart.draw('.chart5', W5, mycfg);
+
+    } else if (newData === 'ATL') {
+         RadarChart.draw(".chart1", a1, mycfg)
+         RadarChart.draw('.chart2', a2, mycfg)
+         RadarChart.draw('.chart3', a3, mycfg)
+         RadarChart.draw('.chart4', a4, mycfg)
+         RadarChart.draw('.chart5', a5, mycfg);
+
+    } else if (newData === 'TOR') {
+         RadarChart.draw(".chart1", t1, mycfg)
+         RadarChart.draw('.chart2', t2, mycfg)
+         RadarChart.draw('.chart3', t3, mycfg)
+         RadarChart.draw('.chart4', t4, mycfg)
+         RadarChart.draw('.chart5', t5, mycfg);
+
+    } else if (newData === 'IND') {
+         RadarChart.draw(".chart1", i1, mycfg)
+         RadarChart.draw('.chart2', i2, mycfg)
+         RadarChart.draw('.chart3', i3, mycfg)
+         RadarChart.draw('.chart4', i4, mycfg)
+         RadarChart.draw('.chart5', i5, mycfg);
+
+    } else if (newData === 'CHI') {
+         RadarChart.draw(".chart1", c1, mycfg)
+         RadarChart.draw('.chart2', c2, mycfg)
+         RadarChart.draw('.chart3', c3, mycfg)
+         RadarChart.draw('.chart4', c4, mycfg)
+         RadarChart.draw('.chart5', c5, mycfg);
+
+    } else if (newData === 'DET') {
+         RadarChart.draw(".chart1", d1, mycfg)
+         RadarChart.draw('.chart2', d2, mycfg)
+         RadarChart.draw('.chart3', d3, mycfg)
+         RadarChart.draw('.chart4', d4, mycfg)
+         RadarChart.draw('.chart5', d5, mycfg);
+    }
+
+});
+var newData = d3.select(this).property('value');
+
+var LegendOptions = ['Celtics',newData];
+var svg = d3.select('svg');
+
+var legend = d3.select('svg').append('legend')
+   .attr("x", 300)
+  .attr("y", 100)
+  .attr("width", 100)
+  .attr("height", 100)
+;
+
+
+legend.append("rect")
+  .attr("x", 200)
+  .attr("y", 25)
+  .attr("width", 10)
+  .attr("height", 10)
+  .style("fill", 'red');
+
+legend.append("text")
+  .attr("x", w - 65)
+  .attr("y", 25)
+  .text('ok');
+
+//Create the title for the legend
+// var text = svg.selectAll("#chart").append('text')
+// 	.attr("class", "title")
+// 	.attr('transform', 'translate(10,10)')
+// 	.attr("x", 10)
+// 	.attr("y", 10)
+// 	.attr("font-size", "12px")
+// 	.attr("fill", "#404040")
+// 	.text("Player Performance in Regular Season");
+
+//Initiate Legend
+// var legend = svg.selectAll('.legend').append("legend")
+// 	.attr("class", "legend")
+// 	.attr("height", 100)
+// 	.attr("width", 200)
+// 	.attr('transform', 'translate(10,10)');
+// 	//Create colour squares
+// 	legend.selectAll('rect')
+// 	  .data(LegendOptions)
+// 	  .enter()
+// 	  .append("rect")
+// 	  .attr("x", w - 65)
+// 	  .attr("y", function(d, i){  return i * 20;})
+// 	  .attr("width", 10)
+// 	  .attr("height", 10)
+// 	  .style("fill", function(d, i){ return colorscale(i);});
+// 	//Create text next to squares
+// 	legend.selectAll('text')
+// 	  .data(LegendOptions)
+// 	  .enter()
+// 	  .append("text")
+// 	  .attr("x", w - 52)
+// 	  .attr("y", function(d, i){ return i * 20 + 9;})
+// 	  .attr("font-size", "11px")
+// 	  .attr("fill", "#737373")
+// 	  .text(function(d) { return d; });
+
+
+	  // handle on click event
+
+</script>
+</body>
+</html>
