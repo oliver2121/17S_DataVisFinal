@@ -884,77 +884,76 @@ d3.select('#select-list2')
 ;
 
     if (newData === 'NULL') {
-    	RadarChart.draw(".chart1", f1, mycfg)
+    	 RadarChart.draw(".chart1", f1, mycfg)
          RadarChart.draw('.chart2', f2, mycfg)
          RadarChart.draw('.chart3', f3, mycfg)
          RadarChart.draw('.chart4', f4, mycfg)
          RadarChart.draw('.chart5', f5, mycfg)
-         //d3.selectAll('text').remove()
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
     }
 
     if       (newData === 'CLE') {
-    	   RadarChart.draw(".chart1", C1, mycfg)
+	 d3.selectAll('text1').remove()
+    	 RadarChart.draw(".chart1", C1, mycfg)
          RadarChart.draw('.chart2', C2, mycfg)
          RadarChart.draw('.chart3', C3, mycfg)
          RadarChart.draw('.chart4', C4, mycfg)
          RadarChart.draw('.chart5', C5, mycfg);
-         d3.select('CLE').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
        
     } else if (newData === 'WAS') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", W1, mycfg)
          RadarChart.draw('.chart2', W2, mycfg)
          RadarChart.draw('.chart3', W3, mycfg)
          RadarChart.draw('.chart4', W4, mycfg)
          RadarChart.draw('.chart5', W5, mycfg);
-         d3.select('WAS').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
 
     } else if (newData === 'ATL') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", a1, mycfg)
          RadarChart.draw('.chart2', a2, mycfg)
          RadarChart.draw('.chart3', a3, mycfg)
          RadarChart.draw('.chart4', a4, mycfg)
-         RadarChart.draw('.chart5', a5, mycfg);
-         //d3.selectAll('text').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         RadarChart.draw('.chart5', a5, mycfg)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
 
     } else if (newData === 'TOR') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", t1, mycfg)
          RadarChart.draw('.chart2', t2, mycfg)
          RadarChart.draw('.chart3', t3, mycfg)
          RadarChart.draw('.chart4', t4, mycfg)
-         RadarChart.draw('.chart5', t5, mycfg);
-         //d3.selectAll('text').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         RadarChart.draw('.chart5', t5, mycfg)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
 
     } else if (newData === 'IND') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", i1, mycfg)
          RadarChart.draw('.chart2', i2, mycfg)
          RadarChart.draw('.chart3', i3, mycfg)
          RadarChart.draw('.chart4', i4, mycfg)
-         RadarChart.draw('.chart5', i5, mycfg);
-         //d3.selectAll('text').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         RadarChart.draw('.chart5', i5, mycfg)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
 
     } else if (newData === 'CHI') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", c1, mycfg)
          RadarChart.draw('.chart2', c2, mycfg)
          RadarChart.draw('.chart3', c3, mycfg)
          RadarChart.draw('.chart4', c4, mycfg)
-         RadarChart.draw('.chart5', c5, mycfg);
-         //d3.selectAll('text').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         RadarChart.draw('.chart5', c5, mycfg)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
 
     } else if (newData === 'DET') {
+	 d3.selectAll('text1').remove()
          RadarChart.draw(".chart1", d1, mycfg)
          RadarChart.draw('.chart2', d2, mycfg)
          RadarChart.draw('.chart3', d33, mycfg)
          RadarChart.draw('.chart4', d4, mycfg)
          RadarChart.draw('.chart5', d5, mycfg);
-         //d3.selectAll('text').remove();
-         d3.select('.chart6').append('text').attr("x",0).attr("y",-20).text(newData)
+         d3.select('.chart6').append('text1').attr("x",0).attr("y",-20).text(newData)
     }
 
     // d3.select('text').remove();
