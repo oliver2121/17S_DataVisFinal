@@ -1267,6 +1267,7 @@
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
 			transition: opacity 1s ease;
+			background-attachment: fixed, fixed;
 			background-image: url("images/TDGARDEN.jpg");
 			background-position: top left,						center center,					center center;
 		background-size: cover,							cover,							cover;
