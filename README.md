@@ -24,9 +24,11 @@ Our project mainly focus on giving a comprehensively analysis of Boston Celtics 
 
 ## Data
 
-We collect data we need from the website below:
+We collect data we need from the websites below:
 
 http://basketball.realgm.com/nba/stats
+
+http://www.basketball-reference.com/teams/BOS/2017.html
 
 ## Data Processing
 
