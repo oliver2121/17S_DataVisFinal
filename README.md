@@ -30,62 +30,31 @@ http://basketball.realgm.com/nba/stats
 
 ## Data Processing
 
-We will eliminate some attributes we don't need to do visualization from the dataset. We hope to get around 1,000 rows of data for our analysis purpose. The data will be processing by excel.
+Combine  multiple piece of data, Filter unnecessary data attribute,Calculate average performance between celtics and its opponent, Adjust the data format and document format  
+
 
 ## Visualization Design
 
-![sketch1](img/1.jpeg)
-Feng Zheng:
+## Team performance
+We discover that we can take advantages of multiple bar to display six attributes in one team. At the same time,by stacking six bar, it is easy for us to identify overall performance between celtics and its opponent. 
 
-I designed a map of United States with 30 teams of the East and the West. The logo of each team is shown on the map. With the mouse click of the team, the team’s data is listed on the chart on the right side. We can see the points, assists, rebounds, blocks, steals and turnovers of two teams in one game. Below the map is an overall data of the 30 teams. By using a switch we can see the different data of all the teams.
+![sketch1](img/8.png)
 
-![sketch2](img/2.jpg)
 
-SishiHao:
+![sketch2](img/9.png)
 
-There are three charts: line chart, bar chart and pie chart. In the line chart, you can see six kinds of data of each game and also you can see the trends of the data. When you click on particular game, the pie chart will show scores contributed by each player, which will be shown in different color. And if you would like to know information about one player of this game, you can click on the player in pie chart and all of the data will be shown in the bar chart. What's more, if you want to know the trends in one period, you can select that period in the line chart, the line chart will show the six kinds of data in that period.
+## Position performance
+We take advantages of drop down list to select the team and discover team performance in each position. Fans are likely to identify the advantages and drawbacks of each team.
 
-![sketch3](img/3.jpg)
-Zhixiang Yang:
+![sketch3](img/6.png)
 
-In Zhixiang's initial design sketch, he consider a heating map in court to show the percentage of shooting ratio is pretty important. And a bar chart could be used for display the player performance in different quarter in season. In the bottom of the page we could use a line chart to show the player performance trend in whole season and compare with other players.
 
-![sketch4](img/4.jpg)
-JiaxinLyu:
+![sketch4](img/7.png)
 
-For visulization design, I design a USA map which contains the distribution of all basketball teams in USA. When your mouse move on the dot in the map, it will display team's logo. Beside the map, it will show a bar chart which will record team 's performance including six index for every match in this season. In addition to this, when you click each match, It will show six pie chart for each index which include fifteen team member's ability index.
+## Player performance
+We figure out that we can take advantages of filter function so that users can search condition by using the mouse to brush the parallel axis to filter the players you want to see.
 
-Summery:
+![sketch4](img/5.png)
 
-After we discussed of those prototype designs we decide we opt to focus on a single team which is Boston Celtics to do the visualization analysis. We will pick up design idea from those sketches and make it a whole.
 
-## Must-Have Features
 
-- 1. Pick a player to see the whole season average data trend.
-- 2. Pick a player to see his performance to different opponents in timeline.
-- 3. Show  the team performance data in whole season.
-
-## Optional Features
-
-- 1. Show a heat map of filed goals percentage in court map.
-- 2. Show a geo map of different opponents with match stats.
-
-## Project Schedule
-
-2/1-2/14: Planning project subject
-
-2/14-2/16: Data collecting and processing
-
-2/15: Documenting project proposal
-
-2/16-2/17: Feedback reviewing
-
-2/18-2/22: Data Visualization
-
-2/23: Demo presentation
-
-2/24-2/28: Refining data visualization
-
-2/27: Film making
-
-3/1: Final version of project
